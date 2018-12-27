@@ -39,3 +39,29 @@ print(r.getLeftChild())
 
 r.insertLeft('b')
 print(r.getLeftChild().getRootVal())
+
+# Traverse a binary tree
+# preorder: Start with root --> left --> right
+# Inorder: inorder left --> root --> inorder right
+# Postorder: postorder left --> postorder right --> root
+
+
+def preorder(tree):
+    if tree:
+        print(tree.getRootVal())
+        preorder(tree.getLeftChild())
+        preorder(tree.getRightChild())
+
+
+def postorder(tree):
+    if tree:
+        postorder(tree.getLeftChild())
+        postorder(tree.getRightChild())
+        print(tree.getRootVal())
+
+
+def inorder(tree):
+    if tree:
+        inorder(tree.getLeftChild())
+        print(tree.getRootVal())
+        inorder(tree.getRightChild())
