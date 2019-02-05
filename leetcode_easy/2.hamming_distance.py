@@ -10,7 +10,7 @@ class Solution:
         :rtype: int
         """
         distance = 0
-        for tups in  zip('{0:01000b}'.format(x), '{0:01000b}'.format(y)):
+        for tups in zip('{0:01000b}'.format(x), '{0:01000b}'.format(y)): # convert number to binary
             if tups[0] != tups[1]:
                 distance += 1
         return distance

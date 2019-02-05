@@ -24,5 +24,5 @@ class Solution:
         return (x==0 and y ==0)
 
 
-moves = "UD"
+moves = "URDLUDDU"
 print(Solution().judgeCircle(moves))
